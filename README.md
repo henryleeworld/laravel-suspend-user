@@ -1,6 +1,6 @@
-# Laravel 7 暫停使用者
+# Laravel 8 暫停使用者
 
-暫停違反使用條款的用戶帳號，包括：冒充他人、持續做出不被允許違反行徑等。Laravel 7 暫停使用者主要是用的 [QuickAdminPanel](https://quickadminpanel.com) 生成的，除了一些定制代碼，可依需求彈性改造的工具。
+暫停違反使用條款的用戶帳號，包括：冒充他人、持續做出不被允許違反行徑等。Laravel 8 暫停使用者主要是用的 [QuickAdminPanel](https://quickadminpanel.com) 生成的，除了一些定制代碼，可依需求彈性改造的工具。
 
 ## 使用方式
 - 把整個專案複製一份到你的電腦裡，這裡指的「內容」不是只有檔案，而是指所有整個專案的歷史紀錄、分支、標籤等內容都會複製一份下來。
@@ -12,7 +12,7 @@ $ git clone
 ```sh
 $ composer install
 ```
-- 產⽣ Laravel 要使用的一組 32 字元長度的隨機字串 APP_KEY 並存在 .env 內。
+- 產生 Laravel 要使用的一組 32 字元長度的隨機字串 APP_KEY 並存在 .env 內。
 ```sh
 $ php artisan key:generate
 ```
@@ -21,13 +21,13 @@ $ php artisan key:generate
 $ php artisan migrate --seed
 ```
 - 在瀏覽器中輸入已定義的路由 URL 來訪問，例如：http://127.0.0.1:8000。
-- 你可以登入經由 `/login` 來進行登入，預社的電子郵件和密碼分別為 __admin@admin.com__ 和 __password__ 。
+- 你可以登入經由 `/login` 來進行登入，預設的電子郵件和密碼分別為 __admin@admin.com__ 和 __password__ 。
 
 ----
 
 ## 畫面截圖
-![](https://i.imgur.com/qOBUymR.png)
+![](https://i.imgur.com/gTmKE3P.png)
 > 暫停使用者直到指定的時間
 
-![](https://i.imgur.com/5xxKsDv.png)
+![](https://i.imgur.com/7hmRrOR.png)
 > 將會在嘗試登入時看見一則訊息，告知帳號已遭暫停。

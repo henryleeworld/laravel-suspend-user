@@ -1,15 +1,15 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Role extends Model
+class Permission extends Model
 {
     use SoftDeletes;
 
-    public $table = 'roles';
+    public $table = 'permissions';
 
     protected $dates = [
         'created_at',
@@ -24,13 +24,8 @@ class Role extends Model
         'deleted_at',
     ];
 
-    public function users()
+    public function roles()
     {
-        return $this->belongsToMany(User::class);
-    }
-
-    public function permissions()
-    {
-        return $this->belongsToMany(Permission::class);
+        return $this->belongsToMany(Role::class);
     }
 }
