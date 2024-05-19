@@ -53,7 +53,7 @@ class UsersController extends Controller
 
     public function update(UpdateUserRequest $request, User $user)
     {
-        $user->update($request->all());
+        $user->update(empty($request['password']) ? $request->except(['password']) : $request->all());
         $user->roles()->sync($request->input('roles', []));
 
         return redirect()->route('admin.users.index');

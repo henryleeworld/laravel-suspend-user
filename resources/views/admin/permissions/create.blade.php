@@ -9,7 +9,7 @@
     <div class="card-body">
         <form action="{{ route("admin.permissions.store") }}" method="POST" enctype="multipart/form-data">
             @csrf
-            <div class="form-group {{ $errors->has('title') ? 'has-error' : '' }}">
+            <div class="mb-3 {{ $errors->has('title') ? 'has-error' : '' }}">
                 <label for="title">{{ trans('cruds.permission.fields.title') }}*</label>
                 <input type="text" id="title" name="title" class="form-control" value="{{ old('title', isset($permission) ? $permission->title : '') }}" required>
                 @if($errors->has('title'))

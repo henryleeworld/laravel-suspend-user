@@ -1,21 +1,19 @@
 @extends('layouts.admin')
 @section('content')
-<div class="content">
-    <div class="row">
-        <div class="col-lg-12">
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
             <div class="card">
-                <div class="card-header">
-                    儀表板
-                </div>
+                <div class="card-header">{{ __('Dashboard') }}</div>
 
                 <div class="card-body">
-                    @if(session('status'))
+                    @if (session('status'))
                         <div class="alert alert-success" role="alert">
                             {{ session('status') }}
                         </div>
                     @endif
 
-                    你已經登入！
+                    {{ __('You are logged in!') }}
                 </div>
             </div>
         </div>
